@@ -1,0 +1,26 @@
+x-app: &default-app
+  env_file:
+    - ".env"
+
+services:
+  backend:
+    <<: *default-app
+    build:
+      context: "./backend"
+      dockerfile: Dockerfile
+    ports:
+      - "${DOCKER_SERVER_PORT_FORWARD}:${SERVER_PORT}"
+    volumes:
+      - "${PWD}/backend:/app"
+
+  frontend:
+    <<: *default-app
+    depends_on:
+    - "backend"
+    build:
+      context: "./frontend"
+      dockerfile: Dockerfile
+    ports:
+      - "${DOCKER_CLIENT_PORT_FORWARD}:${CLIENT_PORT}"
+    volumes:
+      - "${PWD}/frontend:/app"
