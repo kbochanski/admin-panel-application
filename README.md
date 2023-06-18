@@ -12,7 +12,7 @@ Using Feathers CLI 🎉 to handle service creation.
 Frontend:
 Using `dataProvider={dataProvider("http://localhost:3030/")}` to connect to Feathers backend (served on port `3030`). Refine automatically creates forms from data it receives using an [Inferencer](https://refine.dev/docs/packages/documentation/inferencer/). You can always customize Refine [data providers](https://refine.dev/docs/tutorial/understanding-dataprovider/index/) and/or [components](https://refine.dev/docs/tutorial/adding-crud-pages/mui/index/).
 
-You can add a using by sending a request with
+You can add a user by sending a request with `./scripts/add-example-user.sh` (if not already exists).
 
 
 ```bash
