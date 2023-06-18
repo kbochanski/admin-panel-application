@@ -13,14 +13,14 @@ services:
     volumes:
       - "${PWD}/backend:/app"
 
-  # frontend:
-  #   <<: *default-app
-  #   depends_on:
-  #   - "backend"
-  #   build:
-  #     context: "./frontend"
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "${DOCKER_CLIENT_PORT_FORWARD}:${CLIENT_PORT}"
-  #   volumes:
-  #     - "${PWD}/frontend:/app"
+  frontend:
+    <<: *default-app
+    depends_on:
+    - "backend"
+    build:
+      context: "./frontend"
+      dockerfile: Dockerfile
+    ports:
+      - "${DOCKER_CLIENT_PORT_FORWARD}:${CLIENT_PORT}"
+    volumes:
+      - "${PWD}/frontend:/app"
