@@ -1,8 +1,3 @@
-
- #!/bin/bash  
-
-: '
-Docker entrypoint
-'
+#!/bin/bash
 
 npm run dev

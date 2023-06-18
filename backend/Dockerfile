@@ -16,4 +16,4 @@ VOLUME /app
 
 EXPOSE 3030
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
