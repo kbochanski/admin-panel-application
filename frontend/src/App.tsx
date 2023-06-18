@@ -25,7 +25,6 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          // dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
           dataProvider={dataProvider("http://localhost:3030")}
           notificationProvider={notificationProvider}
           Layout={Layout}
@@ -38,6 +37,7 @@ function App() {
               show: MuiInferencer,
               create: MuiInferencer,
               edit: MuiInferencer,
+              canDelete: true,
             },
           ]}
           routerProvider={routerProvider}

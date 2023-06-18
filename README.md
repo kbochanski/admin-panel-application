@@ -14,7 +14,10 @@ Using `dataProvider={dataProvider("http://localhost:3030/")}` to connect to Feat
 ```bash
 # Start frontend and backend -- local directories are mounted as volumes
 docker compose up
-# Database Operations -- Create file for migration
+
+# Database operations -- Create database
+npm run migrate
+# Create file for migration
 npm run migrate:make -- <migration-name>
 # Edit file then run
 npm run migrate

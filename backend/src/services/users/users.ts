@@ -35,24 +35,24 @@ export const user = (app: Application) => {
     around: {
       all: [schemaHooks.resolveExternal(userExternalResolver), schemaHooks.resolveResult(userResolver)],
       find: [
-        authenticate('jwt')
+        // authenticate('jwt')
         // additional
       ],
       get: [
-        authenticate('jwt')
+        // authenticate('jwt')
         // additional
       ],
       create: [],
       update: [
-        authenticate('jwt')
+        // authenticate('jwt')
         // additional
       ],
       patch: [
-        authenticate('jwt')
+        // authenticate('jwt')
         // additional
       ],
       remove: [
-        authenticate('jwt')
+        // authenticate('jwt')
         // additional
       ]
     },
