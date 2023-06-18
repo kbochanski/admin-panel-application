@@ -16,4 +16,4 @@ VOLUME /app
 
 EXPOSE 3030
 
-CMD [ "npm", "run", "dev" ]
+ENTRYPOINT ["entrypoint.sh"]
