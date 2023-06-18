@@ -23,4 +23,7 @@ npm run migrate
 npm run migrate:make -- <migration-name>
 # Edit file then run
 npm run migrate
+
+# Test - backend with Mocha
+cd backend: npm test
 ```
